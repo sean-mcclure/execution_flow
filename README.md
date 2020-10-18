@@ -68,23 +68,23 @@ The JSON file for our program above looks like this:
 
 ```
 {
-	"children": [{
-		"name": "funct1",
-		"children": [{
-			"name": "funct2",
-			"children": [{
-				"name": "funct3",
-				"children": [{
-					"name": "funct4",
-					"children": []
-				}]
-			}]
-		}]
-	}, {
-		"name": "funct5",
-		"children": []
-	}],
-	"name": "My Project"
+  "children": [{
+    "name": "funct1",
+    "children": [{
+      "name": "funct2",
+      "children": [{
+        "name": "funct3",
+        "children": [{
+          "name": "funct4",
+          "children": []
+        }]
+      }]
+    }]
+  }, {
+    "name": "funct5",
+    "children": []
+  }],
+  "name": "My Project"
 }
 ```
 
