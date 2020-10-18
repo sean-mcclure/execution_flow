@@ -2,7 +2,8 @@ az.style_body({
     "background": "rgb(34, 112, 147)",
     "font-family": "Dosis",
     "color": "white",
-    "min-width": "1200px"
+    "min-width": "1200px",
+    "overflow" : "hidden"
 })
 az.add_sections({
     "this_class": "main_section",
@@ -16,7 +17,8 @@ az.style_body({
 az.all_style_sections('main_section', {
     "background": "rgb(34, 112, 147)",
     "height": "auto",
-    "border-radius": "6px"
+    "border-radius": "6px",
+    "overflow" : "hidden"
 })
 az.style_sections('main_section', 1, {
     "position": "fixed",
@@ -76,7 +78,7 @@ az.add_icon("nav_clicks_cells", 3, {
 az.style_icon("upload_icon", 1, {
     "font-size": "40px",
     "cursor": "pointer",
-    "align" : "right",
+    "align" : "left",
     "margin-right" : "10px"
 })
 az.add_event("upload_icon", 1, {
@@ -131,6 +133,6 @@ az.style_iframe('tree_visual', 1, {
     "width": "100%",
     "height": "800px",
     "align": "center",
-    "overflow": "scroll",
+    "overflow": "hidden",
     "visibility": "hidden"
 })

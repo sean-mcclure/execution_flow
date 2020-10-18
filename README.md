@@ -10,5 +10,42 @@ You can install ExecutionFlow directly from this repo by running the following i
 
 # Examples
 
-- show example functions calls
-- show images
+If running in Jupyter, you can do this:
+
+```
+%run tracker.py
+
+@track
+def funct1():
+    res = funct2()
+    print(res)
+
+@track
+def funct2():
+    factor = 3
+    res = funct3(factor)
+    return(res)
+
+@track
+def funct3(factor):
+    temp = funct4()
+    res = 1 + 100*factor + temp
+    return(res)
+
+@track
+def funct4():
+    res = 1 + 100
+    return(res)
+
+@track
+def funct5():
+    res = "hello"
+    print(res)
+```
+Then in another cell, call your functions:
+
+```
+Tracker.project_name(track, "Ford MVP")
+funct1()
+funct5()
+```
