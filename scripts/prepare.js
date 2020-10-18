@@ -48,7 +48,7 @@ az.style_layout('nav_clicks', 1, {
 })
 az.add_text("nav_clicks_cells", 1, {
     "this_class": "notes_2_tree_title_main",
-    "text": "Execution Flow"
+    "text": "ExecutionFlow"
 })
 az.style_text("notes_2_tree_title_main", 1, {
     "color": "white",

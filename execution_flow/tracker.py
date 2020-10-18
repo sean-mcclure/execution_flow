@@ -1,19 +1,19 @@
 import json
 
+res = {}
+res["children"] = []
+
 class Tracker:
     
     level = 0
 
     def __init__(self):
         self.project_name = ""
-        res = {}
-        res["children"] = []
         
     def project_name(self, project_name):
         res["name"] = project_name
 
     def __call__(self, fn):
-        print('calling')
         def wrapper(*args, **kwargs):
             if(self.level == 0):
                 inner = {}
@@ -55,7 +55,7 @@ class Tracker:
             self.level -= 1
             
             with open('flow.json', 'w') as fp:
-                json.dump(res, fp)
+                json.dump(res, fp, indent=2)
             
             return out
         return wrapper
