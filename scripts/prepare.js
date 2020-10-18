@@ -69,14 +69,15 @@ az.style_word("notes_2_tree_title_main", 1, {
     "word": "Flow",
     "color": "rgb(255, 82, 82)"
 })
-az.add_icon("main_section", 2, {
+az.add_icon("nav_clicks_cells", 3, {
     "this_class": "upload_icon",
     "icon_class": "fa-upload"
 })
 az.style_icon("upload_icon", 1, {
-    "font-size": "50px",
+    "font-size": "40px",
     "cursor": "pointer",
-    "align": "center_screen"
+    "align" : "right",
+    "margin-right" : "10px"
 })
 az.add_event("upload_icon", 1, {
     "type": "click",
@@ -118,7 +119,6 @@ az.add_event("upload_default", 1, {
                 "visibility": "visible"
             })
         }, 1000)
-        az.remove_element("upload_icon", 1)
         az.close_overlay("upload_tree", 1)
     }
 })
