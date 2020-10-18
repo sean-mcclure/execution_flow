@@ -1,0 +1,14 @@
+{
+  "name": "@mbostock/collapsible-tree",
+  "main": "@d3/collapsible-tree.js",
+  "version": "347.0.0",
+  "homepage": "https://observablehq.com/@mbostock/collapsible-tree",
+  "author": {
+    "name": "Mike Bostock",
+    "url": "https://observablehq.com/@mbostock"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
