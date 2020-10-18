@@ -21,7 +21,7 @@ Below is an example with 5 functions. In order to track these functions during e
 ```
 from execution_flow.tracker import *
 
-<span style='color:purple'>@track</span>
+@track
 def funct1():
     res = funct2()
     print(res)
@@ -88,11 +88,20 @@ The JSON file for our program above looks like this:
 }
 ```
 
-Notice how the *nesting* in the JSON representation captures the dependencies of the function execution. 
+This is a standard JSON representation that can be paired with visualization libraries like D3.js. 
+
+Notice how the *nesting* in the JSON representation captures the *dependencies* of the function execution. 
 
 # Visualizing Executions Flows
 
-To visualize your execution flow, upload the flow.json file to ExecutionFlow:
+**execution_flow** comes pre-baked with a hierarchical tree viewer. You can visualize your execution flows directly in a Jupyter Notebook cell or in a dedicated browser tab.
 
-- add gif
-- show image of flow
+To visualize your execution flow in Jupyter, simply call the `show` method on the Tracker class along with the "jupyter" argument:
+
+```Tracker.show("jupyter")```
+
+This will open a frame inside a Jupyter cell running the ExecutionFlow application. Simply upload your flow.json file to this application and it will draw your execution flow graphically.
+
+To visualize your execution flow in a dedicated browser tab (better for larger flows) call the `show` method on the Tracker class along with the "browser" argument:
+
+```Tracker.show("browser")```
