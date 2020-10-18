@@ -49,3 +49,8 @@ Tracker.project_name(track, "Ford MVP")
 funct1()
 funct5()
 ```
+
+This will automatically download a flow.json to your root diectory. To visualize your execution flow, upload the flow.json file to ExecutionFlow:
+
+- add gif
+- show image of flow
