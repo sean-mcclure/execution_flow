@@ -6,7 +6,7 @@ ExecutionFlow allows you to track your Python functions, making it easier to sch
 
 You can install ExecutionFlow directly from this repo by running the following in a Jupyter Cell:
 
-```pip install```
+```pip install git+https://github.com/sean-mcclure/execution_flow```
 
 # Examples
 
