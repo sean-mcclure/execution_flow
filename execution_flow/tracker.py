@@ -1,14 +1,13 @@
 import json
 
-res = {}
-res["children"] = []
-
 class Tracker:
     
     level = 0
 
     def __init__(self):
         self.project_name = ""
+        res = {}
+        res["children"] = []
         
     def project_name(self, project_name):
         res["name"] = project_name
