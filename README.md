@@ -21,7 +21,7 @@ Below is an example with 5 functions. In order to track these functions during e
 ```
 from execution_flow.tracker import *
 
-@track
+<span style='color:purple'>@track</span>
 def funct1():
     res = funct2()
     print(res)
@@ -68,6 +68,7 @@ The JSON file for our program above looks like this:
 
 ```
 {
+  "name": "My Project",
   "children": [{
     "name": "funct1",
     "children": [{
@@ -83,10 +84,11 @@ The JSON file for our program above looks like this:
   }, {
     "name": "funct5",
     "children": []
-  }],
-  "name": "My Project"
+  }]
 }
 ```
+
+Notice how the *nesting* in the JSON representation captures the dependencies of the function execution. 
 
 # Visualizing Executions Flows
 
