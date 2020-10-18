@@ -13,6 +13,7 @@ class Tracker:
         res["name"] = project_name
 
     def __call__(self, fn):
+        print('calling')
         def wrapper(*args, **kwargs):
             if(self.level == 0):
                 inner = {}
