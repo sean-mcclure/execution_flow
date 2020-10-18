@@ -8,6 +8,12 @@ You can install ExecutionFlow directly from this repo by running the following i
 
 ```pip install git+https://github.com/sean-mcclure/execution_flow```
 
+# Import
+
+Import execution_flow as follows:
+
+```from execution_flow.tracker import *```
+
 # Examples
 
 If running in Jupyter, you can do this:
