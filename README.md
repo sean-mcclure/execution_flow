@@ -16,7 +16,7 @@ Import execution_flow as follows:
 
 # Examples
 
-Below is an example with 5 functions. Note how funct1 calls funct2, which calls funct3, which finally calls funct4. funct5 is by itself.
+Below is an example with 5 functions. In order to track these functions during execution we decorate each of them with the `@track` decorator as follows:
 
 ```
 from execution_flow.tracker import *
@@ -50,7 +50,21 @@ def funct5():
 
 ```
 
-This will automatically download a flow.json to your root diectory. To visualize your execution flow, upload the flow.json file to ExecutionFlow:
+Note how funct1 calls funct2, which calls funct3, which calls funct4. Finally, funct5 is by itself, and gets called last. This is the execution flow we expect to be reported by execution_flow. 
+
+To run executinon_flow, we simply call the functions however they are set in oyur project. Here we will call funct1, then funct5. We can also provide a project_name to the Tracker class: 
+
+```
+Tracker.project_name(track, "My Project")
+funct1()
+funct5()
+```
+
+This will automatically download a flow.json to our root diectory. We can inspect this file manually to inspect our project's execution flow, or we can visualize it graphically as outlined in the next section.
+
+# Visualizing Executions Flows
+
+To visualize your execution flow, upload the flow.json file to ExecutionFlow:
 
 - add gif
 - show image of flow
