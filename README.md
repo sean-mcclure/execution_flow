@@ -4,7 +4,7 @@ ExecutionFlow allows you to track your Python functions, making it easier to sch
 
 # Install
 
-You can install ExecutionFlow directly from this repo by running the following in a Jupyter Cell:
+You can install ExecutionFlow directly from this repo by running the following:
 
 ```pip install git+https://github.com/sean-mcclure/execution_flow```
 
@@ -16,10 +16,10 @@ Import execution_flow as follows:
 
 # Examples
 
-If running in Jupyter, you can do this:
+Below is an example with 5 functions. Note how funct1 calls funct2, which calls funct3, which finally calls funct4. funct5 is by itself.
 
 ```
-%run tracker.py
+from execution_flow.tracker import *
 
 @track
 def funct1():
@@ -47,13 +47,7 @@ def funct4():
 def funct5():
     res = "hello"
     print(res)
-```
-Then in another cell, call your functions:
 
-```
-Tracker.project_name(track, "Ford MVP")
-funct1()
-funct5()
 ```
 
 This will automatically download a flow.json to your root diectory. To visualize your execution flow, upload the flow.json file to ExecutionFlow:
