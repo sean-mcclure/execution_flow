@@ -50,9 +50,11 @@ def funct5():
 
 ```
 
-Note how funct1 calls funct2, which calls funct3, which calls funct4. Finally, funct5 is by itself, and gets called last. This is the execution flow we expect to be reported by execution_flow. 
+Note how `funct1` calls `funct2`, which calls `funct3`, which calls `funct4`. Finally, `funct5` is by itself, and gets called last. This is the execution flow we expect to be reported by execution_flow. 
 
-To run executinon_flow, we simply call the functions however they are set in oyur project. Here we will call funct1, then funct5. We can also provide a project_name to the Tracker class: 
+To run execution_flow, we simply call the functions.
+
+Here we will call `funct1`, then `funct5`. We can also provide a project_name to the Tracker class: 
 
 ```
 Tracker.project_name(track, "My Project")
@@ -60,7 +62,31 @@ funct1()
 funct5()
 ```
 
-This will automatically download a flow.json to our root diectory. We can inspect this file manually to inspect our project's execution flow, or we can visualize it graphically as outlined in the next section.
+This will automatically download a `flow.json` to our root diectory. We can inspect this file manually, or we can visualize it graphically as outlined in the next section.
+
+The JSON file for our program above looks like this:
+
+```
+{
+	"children": [{
+		"name": "funct1",
+		"children": [{
+			"name": "funct2",
+			"children": [{
+				"name": "funct3",
+				"children": [{
+					"name": "funct4",
+					"children": []
+				}]
+			}]
+		}]
+	}, {
+		"name": "funct5",
+		"children": []
+	}],
+	"name": "My Project"
+}
+```
 
 # Visualizing Executions Flows
 
