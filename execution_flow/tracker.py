@@ -1,10 +1,9 @@
 import json
 import webbrowser
-from IPython.display import display, HTML
+from IPython.display import IFrame
 
 def window_open(url):
-    js = "<script>window.open('{url}'</script>".format(url=url)
-    display(HTML(js))
+    IFrame(src="https://collaboratescience.com/execution_flow/", width='100%', height='500px')
 
 class Tracker:
     
