@@ -8,6 +8,9 @@ setup(name='execution_flow',
       author_email='sean.mcclure@kedion.ai',
       license='MIT',
       packages=['execution_flow'],
+      install_requires=[
+          'ipython'
+      ],
       test_suite='nose.collector',
       tests_require=['nose'],
       zip_safe=False)

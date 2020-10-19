@@ -1,5 +1,10 @@
 import json
 import webbrowser
+from IPython.display import display, HTML
+
+def window_open(url):
+    js = "<script>window.open('{url}'</script>".format(url=url)
+    display(HTML(js))
 
 class Tracker:
     
@@ -14,6 +19,8 @@ class Tracker:
     def show(show_type):
         if(show_type == "browser"):
             webbrowser.open('https://collaboratescience.com/execution_flow/', new=2)
+        if(show_type == "jupyter_browser"):
+            window_open("https://collaboratescience.com/execution_flow/")
 
     def __call__(self, fn):
         def wrapper(*args, **kwargs):
