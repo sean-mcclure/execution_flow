@@ -103,3 +103,9 @@ This will open a frame inside a Jupyter cell running the ExecutionFlow applicati
 To visualize your execution flow in a dedicated browser tab (better for larger flows) call the `show` method on the Tracker class along with the "browser" argument:
 
 ```Tracker.show("browser")```
+
+# Testing
+
+Run tests with the following command:
+
+```python setup.py test```
