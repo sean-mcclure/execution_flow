@@ -30,12 +30,10 @@ def funct5():
     print(res)
 
 def test_tracking():
-
-    Tracker.project_name(track, "My Project")
     funct1()
     funct5()
 
     with open("flow.json") as f:
         flow_dict = json.load(f)
 
-    assert len(flow_dict.keys()) == 2
+    assert len(flow_dict.keys()) == 1
