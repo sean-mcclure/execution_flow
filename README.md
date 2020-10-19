@@ -57,7 +57,6 @@ To run execution_flow, we simply call the functions.
 Here we will call `funct1`, then `funct5`. We can also provide a project_name to the Tracker class: 
 
 ```
-Tracker.project_name(track, "My Project")
 funct1()
 funct5()
 ```
@@ -68,7 +67,6 @@ The JSON file for our program above looks like this:
 
 ```
 {
-  "name": "My Project",
   "children": [{
     "name": "funct1",
     "children": [{
@@ -90,7 +88,7 @@ The JSON file for our program above looks like this:
 
 This is a standard JSON representation that can be paired with visualization libraries like D3.js. 
 
-Notice how the *nesting* in the JSON representation captures the *dependencies* of the function execution. 
+Notice how the *nesting* in the JSON captures the *dependencies* of the function execution. 
 
 # Visualizing Executions Flows
 
