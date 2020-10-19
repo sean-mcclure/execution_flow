@@ -94,14 +94,14 @@ Notice how the *nesting* in the JSON captures the *dependencies* of the function
 
 **execution_flow** comes pre-baked with a hierarchical tree viewer. You can visualize your execution flows directly in a Jupyter Notebook cell or in a dedicated browser tab.
 
-To visualize your execution flow in Jupyter, simply call the `show` method on the Tracker class along with the "jupyter" argument:
+To visualize your execution flow in **Jupyter**, simply embed the following iframe in any cell:
 
 ```
-#coming soon
-Tracker.show("jupyter")
+from IPython.display import IFrame
+IFrame(src="https://collaboratescience.com/execution_flow/", width='100%', height='500px')
 ```
 
-This will open a frame inside a Jupyter cell running the ExecutionFlow application. Simply upload your flow.json file to this application and it will draw your execution flow graphically.
+This will run the ExecutionFlow application inside your Jupyter notebook. Upload your flow.json file to this application to draw your execution flow graphically.
 
 To visualize your execution flow in a dedicated **browser** tab (better for larger flows) call the `show` method on the Tracker class along with the "browser" argument:
 
