@@ -54,7 +54,7 @@ Note how `funct1` calls `funct2`, which calls `funct3`, which calls `funct4`. Fi
 
 To run execution_flow, we simply call the functions.
 
-Here we will call `funct1`, then `funct5`. We can also provide a project_name to the Tracker class: 
+Here we will call `funct1`, then `funct5`: 
 
 ```
 funct1()
@@ -96,11 +96,14 @@ Notice how the *nesting* in the JSON captures the *dependencies* of the function
 
 To visualize your execution flow in Jupyter, simply call the `show` method on the Tracker class along with the "jupyter" argument:
 
-```Tracker.show("jupyter")```
+```
+#coming soon
+Tracker.show("jupyter")
+```
 
 This will open a frame inside a Jupyter cell running the ExecutionFlow application. Simply upload your flow.json file to this application and it will draw your execution flow graphically.
 
-To visualize your execution flow in a dedicated browser tab (better for larger flows) call the `show` method on the Tracker class along with the "browser" argument:
+To visualize your execution flow in a dedicated **browser** tab (better for larger flows) call the `show` method on the Tracker class along with the "browser" argument:
 
 ```Tracker.show("browser")```
 

@@ -1,4 +1,5 @@
 import json
+import webbrowser
 
 class Tracker:
     
@@ -9,6 +10,10 @@ class Tracker:
         self.track_functs = {}
         self.track_functs["children"] = []
         self.project_name = "project_name"
+
+    def show(show_type):
+        if(show_type == "browser"):
+            webbrowser.open('https://collaboratescience.com/execution_flow/', new=2)
 
     def __call__(self, fn):
         def wrapper(*args, **kwargs):

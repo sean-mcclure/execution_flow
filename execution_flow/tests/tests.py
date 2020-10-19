@@ -32,6 +32,7 @@ def funct5():
 def test_tracking():
     funct1()
     funct5()
+    Tracker.show("browser")
 
     with open("flow.json") as f:
         flow_dict = json.load(f)
