@@ -14,6 +14,7 @@ class Tracker:
         track_functs["name"] = project_name
 
     def __call__(self, fn):
+        print("and this and then that")
         def wrapper(*args, **kwargs):
             if(self.level == 0):
                 inner = {}
